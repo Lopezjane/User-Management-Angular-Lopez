@@ -5,11 +5,11 @@ const app = express();
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-app.use('/api-docs', require('./_helpers/swagger'));
 const errorHandler = require('./_middleware/error_handler');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// Increase the payload size limit
+app.use(bodyParser.urlencoded({ extended: false, limit: '50mb' }));
+app.use(bodyParser.json({ limit: '50mb' }));
 app.use(cookieParser());
 
 // Define environment variables
@@ -25,7 +25,7 @@ const allowedOrigins = [
     'http://127.0.0.1:4200'
 ];
 
-// CORS configuration
+// CORS configuration with enhanced options
 app.use(cors({
     origin: function (origin, callback) {
         // allow requests with no origin (like mobile apps or curl requests)
@@ -36,8 +36,16 @@ app.use(cors({
         }
         return callback(null, true);
     },
-    credentials: true
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept'],
+    credentials: true,
+    maxAge: 86400 // 24 hours
 }));
+
+// Add a health check endpoint
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'UP', message: 'Server is running' });
+});
 
 // api routes
 app.use('/accounts', require('./accounts/accounts.controller'));
