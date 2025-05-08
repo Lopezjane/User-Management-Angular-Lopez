@@ -1,6 +1,9 @@
-<nav class="admin-nav navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
+<nav class="admin-nav navbar navbar-expand-lg">
+    <div class="container">
         <div class="navbar-nav">
+            <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">
+                <i class="fas fa-tachometer-alt me-1"></i> Dashboard
+            </a>
             <a routerLink="accounts" routerLinkActive="active" class="nav-item nav-link">
                 <i class="fas fa-users me-1"></i> Accounts
             </a>

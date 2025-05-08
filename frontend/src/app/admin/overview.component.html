@@ -1,49 +1,89 @@
 <div class="row">
     <div class="col-md-12">
-        <h1 class="mb-4">Admin Dashboard</h1>
-        <div class="alert alert-info">
-            <i class="fas fa-info-circle me-2"></i> This section is accessible only by administrators.
+        <h1 class="mb-4 text-dark">
+            <i class="fas fa-tachometer-alt me-2"></i>Admin Dashboard
+        </h1>
+        <div class="alert" style="background-color: #d1fae5; border-color: #10b981; color: #065f46;">
+            <i class="fas fa-info-circle me-2"></i> Welcome to the administration area! Here you can manage users and system settings.
         </div>
     </div>
 </div>
 
-<div class="row mt-3">
+<div class="row mt-4">
     <div class="col-md-4">
-        <div class="card shadow-sm border-0 mb-4">
+        <div class="card shadow-sm border-0 mb-4 dashboard-card">
             <div class="card-body text-center p-4">
-                <div class="display-4 text-primary mb-3">
-                    <i class="fas fa-users"></i>
+                <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="fas fa-users fa-2x text-primary"></i>
                 </div>
-                <h3>Manage Accounts</h3>
+                <h3 class="mt-2">Manage Accounts</h3>
                 <p class="text-muted">Create, edit and manage user accounts</p>
-                <a routerLink="accounts" class="btn btn-primary w-100">Manage Accounts</a>
+                <a routerLink="accounts" class="btn btn-primary w-100">
+                    <i class="fas fa-user-cog me-2"></i>Manage Accounts
+                </a>
             </div>
         </div>
     </div>
     
     <div class="col-md-4">
-        <div class="card shadow-sm border-0 mb-4">
+        <div class="card shadow-sm border-0 mb-4 dashboard-card">
             <div class="card-body text-center p-4">
-                <div class="display-4 text-success mb-3">
-                    <i class="fas fa-shield-alt"></i>
+                <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
                 </div>
-                <h3>Security</h3>
+                <h3 class="mt-2">Security Center</h3>
                 <p class="text-muted">Manage permissions and security settings</p>
-                <button class="btn btn-success w-100" disabled>Coming Soon</button>
+                <button class="btn btn-primary w-100" disabled>
+                    <i class="fas fa-lock me-2"></i>Coming Soon
+                </button>
             </div>
         </div>
     </div>
     
     <div class="col-md-4">
-        <div class="card shadow-sm border-0 mb-4">
+        <div class="card shadow-sm border-0 mb-4 dashboard-card">
             <div class="card-body text-center p-4">
-                <div class="display-4 text-warning mb-3">
-                    <i class="fas fa-chart-bar"></i>
+                <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="fas fa-chart-bar fa-2x text-primary"></i>
                 </div>
-                <h3>Analytics</h3>
+                <h3 class="mt-2">Analytics</h3>
                 <p class="text-muted">View system statistics and user analytics</p>
-                <button class="btn btn-warning text-white w-100" disabled>Coming Soon</button>
+                <button class="btn btn-primary w-100" disabled>
+                    <i class="fas fa-chart-line me-2"></i>Coming Soon
+                </button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="row mt-2">
+    <div class="col-md-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">
+                    <i class="fas fa-clipboard-list me-2"></i>Quick Tasks
+                </h5>
+                <span class="badge bg-primary">Admin</span>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <a routerLink="accounts/add" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-user-plus me-2 text-primary"></i>
+                            Add new user
+                        </div>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </a>
+                    <a routerLink="accounts" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <div>
+                            <i class="fas fa-users-cog me-2 text-primary"></i>
+                            View all users
+                        </div>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
