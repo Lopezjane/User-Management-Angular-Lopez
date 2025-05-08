@@ -1,0 +1,122 @@
+// global styles
+a { 
+  cursor: pointer; 
+  text-decoration: none;
+}
+
+:root {
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --primary-light: #ddd6fe;
+  --secondary: #a78bfa;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --light: #f5f3ff;
+  --dark: #4c1d95;
+  --body-bg: #f9fafb;
+  --text-color: #4b5563;
+  --border-color: #e2e8f0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--body-bg);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+.admin-nav {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #e8e9ea;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn-delete-account {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+// Form styles
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+// Card styling
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+// Badge styling
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+// Table styling
+.table {
+  font-size: 0.95rem;
+}
+
+.table th {
+  font-weight: 600;
+  color: #495057;
+}
+
+// Animations
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
