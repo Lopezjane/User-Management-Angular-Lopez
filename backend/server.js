@@ -18,9 +18,8 @@ const port = isProduction ? (process.env.PORT || 80) : 4000;
 
 // Define allowed origins
 const allowedOrigins = [
-    'https://user-management-angular-eight.vercel.app',
-    'https://user-management-angular.vercel.app',
-    'https://user-management-angular.onrender.com',
+    'https://user-management-angular-lopez.vercel.app',
+    'https://user-management-angular-lopez.onrender.com',
     'http://localhost:4200',
     'http://localhost:3000',
     'http://127.0.0.1:4200'

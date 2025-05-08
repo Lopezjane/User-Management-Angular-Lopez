@@ -112,9 +112,9 @@ function register(req, res, next) {
     if (!origin && req.headers.host) {
         const host = req.headers.host;
         if (host.includes('vercel.app')) {
-            origin = 'https://user-management-angular-eight.vercel.app';
+            origin = 'https://user-management-angular-lopez.vercel.app';
         } else if (host.includes('onrender.com')) {
-            origin = 'https://user-management-angular.onrender.com';
+            origin = 'https://user-management-angular-lopez.onrender.com';
         }
     }
     
@@ -161,9 +161,9 @@ function forgotPassword(req, res, next) {
     if (!origin && req.headers.host) {
         const host = req.headers.host;
         if (host.includes('vercel.app')) {
-            origin = 'https://user-management-angular-eight.vercel.app';
+            origin = 'https://user-management-angular-lopez.vercel.app';
         } else if (host.includes('onrender.com')) {
-            origin = 'https://user-management-angular.onrender.com';
+            origin = 'https://user-management-angular-lopez.onrender.com';
         }
     }
     

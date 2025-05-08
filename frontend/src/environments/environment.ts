@@ -5,9 +5,7 @@ const isVercel = hostname.includes('vercel.app');
 
 export const environment = {
     production: false,
-    apiUrl: isLocalhost 
-        ? 'http://localhost:4000/accounts'
-        : 'https://user-management-angular.onrender.com/accounts',
+    apiUrl: 'https://user-management-angular-lopez.onrender.com',
     cookieDomain: isLocalhost 
         ? undefined 
         : isVercel 

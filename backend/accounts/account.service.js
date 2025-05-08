@@ -261,11 +261,11 @@ async function sendVerificationEmail(account, origin) {
     if (origin) {
         // If it's from Vercel, use the Vercel frontend URL
         if (origin.includes('vercel.app')) {
-            frontendUrl = 'https://user-management-angular-eight.vercel.app';
+            frontendUrl = 'https://user-management-angular-lopez.vercel.app';
         } 
         // If it's from Render frontend, use the Render frontend URL
         else if (origin.includes('onrender.com')) {
-            frontendUrl = 'https://user-management-angular.onrender.com';
+            frontendUrl = 'https://user-management-angular-lopez.onrender.com';
         }
         // Otherwise use the provided origin (likely localhost)
         else {
@@ -273,7 +273,7 @@ async function sendVerificationEmail(account, origin) {
         }
     } else {
         // Fallback to Vercel URL if no origin provided
-        frontendUrl = 'https://user-management-angular-eight.vercel.app';
+        frontendUrl = 'https://user-management-angular-lopez.vercel.app';
     }
     
     // Create the verification URL
@@ -320,11 +320,11 @@ async function sendAlreadyRegisteredEmail(email, origin) {
     if (origin) {
         // If it's from Vercel, use the Vercel frontend URL
         if (origin.includes('vercel.app')) {
-            frontendUrl = 'https://user-management-angular-eight.vercel.app';
+            frontendUrl = 'https://user-management-angular-lopez.vercel.app';
         } 
         // If it's from Render frontend, use the Render frontend URL
         else if (origin.includes('onrender.com')) {
-            frontendUrl = 'https://user-management-angular.onrender.com';
+            frontendUrl = 'https://user-management-angular-lopez.onrender.com';
         }
         // Otherwise use the provided origin (likely localhost)
         else {
@@ -332,7 +332,7 @@ async function sendAlreadyRegisteredEmail(email, origin) {
         }
     } else {
         // Fallback to Vercel URL if no origin provided
-        frontendUrl = 'https://user-management-angular-eight.vercel.app';
+        frontendUrl = 'https://user-management-angular-lopez.vercel.app';
     }
     
     // Create the forgot password URL
@@ -382,11 +382,11 @@ async function sendPasswordResetEmail(account, origin) {
     if (origin) {
         // If it's from Vercel, use the Vercel frontend URL
         if (origin.includes('vercel.app')) {
-            frontendUrl = 'https://user-management-angular-eight.vercel.app';
+            frontendUrl = 'https://user-management-angular-lopez.vercel.app';
         } 
         // If it's from Render frontend, use the Render frontend URL
         else if (origin.includes('onrender.com')) {
-            frontendUrl = 'https://user-management-angular.onrender.com';
+            frontendUrl = 'https://user-management-angular-lopez.onrender.com';
         }
         // Otherwise use the provided origin (likely localhost)
         else {
@@ -394,7 +394,7 @@ async function sendPasswordResetEmail(account, origin) {
         }
     } else {
         // Fallback to Vercel URL if no origin provided
-        frontendUrl = 'https://user-management-angular-eight.vercel.app';
+        frontendUrl = 'https://user-management-angular-lopez.vercel.app';
     }
     
     // Create the reset URL
