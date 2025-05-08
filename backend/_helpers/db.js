@@ -16,7 +16,13 @@ async function initialize() {
             port,
             user,
             password,
-            database
+            database,
+            ssl: {
+                rejectUnauthorized: false
+            },
+            connectionTimeoutMillis: 10000,
+            idleTimeoutMillis: 30000,
+            max: 20
         });
         
         // Test connection
@@ -28,9 +34,18 @@ async function initialize() {
             port,
             dialect: 'postgres',
             dialectOptions: {
-                connectTimeout: 10000
+                ssl: {
+                    require: true,
+                    rejectUnauthorized: false
+                }
             },
-            logging: console.log // Enable to see SQL queries
+            pool: {
+                max: 5,
+                min: 0,
+                acquire: 30000,
+                idle: 10000
+            },
+            logging: console.log
         });
 
         // 3. Initialize models

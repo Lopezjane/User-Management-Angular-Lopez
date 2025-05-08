@@ -12,6 +12,7 @@ RUN npm install
 # Install specific required packages
 RUN npm install express dotenv body-parser cookie-parser cors rootpath && \
     npm install sequelize mysql2 && \
+    npm install pg pg-hstore && \
     npm install bcryptjs jsonwebtoken express-jwt joi && \
     npm install nodemailer swagger-ui-express yamljs && \
     npm install --save-dev nodemon
